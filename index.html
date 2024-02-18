@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>少明生存服</title>
+    <meta charset="UTF-8">
+    <title>我的Minecraft服务器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>少明就是個j</h1>
-    <p>少明啥也不幹</p>
+    <div class="container">
+        <h1>欢迎来到我的Minecraft服务器</h1>
+        <p>这是一个充满冒险和创造的世界，快来加入我们吧！</p>
+        <button onclick="changeText()">点击这里开始你的冒险之旅</button>
+    </div>
+
+    <script>
+        function changeText() {
+            document.querySelector('p').innerText = 'IP:mc.mchooray.xyz:53861';
+        }
+    </script>
 </body>
 </html>
