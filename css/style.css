@@ -21,6 +21,5 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #f0f0f0; /* 替换成你想要的背景颜色 */
     padding: 10px; /* 可根据需要调整 */
   }
