@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/css/iziToast.min.css">
     <script type="text/javascript"
         src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/js/iziToast.min.js">
-    </script>
+        </script>
     <!-- Search Box -->
     <!--
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -56,8 +56,6 @@
     </script>
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
-    <!-- 51.LA 统计 -->
-    <script src="./js/51LA.js"></script>
 </head>
 
 <body>
@@ -80,18 +78,20 @@
     <section id="section" class="section">
         <!-- 背景图片 -->
         <style type="text/css">
-            body{
-              background: url("img/background1.webp") no-repeat center center fixed;
-                          /*兼容浏览器版本*/
-                          -webkit-background-size: cover;
-                          -o-background-size: cover;                
-                          background-size: cover;
-            } /*背景图*/
-       
-            .test {
-              margin-top: 100px;
+            body {
+                background: url("img/background1.webp") no-repeat center center fixed;
+                /*兼容浏览器版本*/
+                -webkit-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
             }
-          </style>
+
+            /*背景图*/
+
+            .test {
+                margin-top: 100px;
+            }
+        </style>
         <!-- 鼠标指针 -->
         <div id="g-pointer-1"></div>
         <div id="g-pointer-2"></div>
@@ -105,7 +105,7 @@
                 <span class="fas fa-search"></span>
             </div>
             <div class="search-data">
-                <input type="text" id="inp" required/>
+                <input type="text" id="inp" required />
                 <div class="line"></div>
                 <!-- <label>Type to search...</label>-->
                 <span class="fas fa-search" id="btn"></span>
@@ -114,36 +114,36 @@
             <script>
                 var oInp = document.getElementById('inp');
                 var oBtn = document.getElementById('btn');
-            
+
                 oBtn.onclick = function () {
                     Search();
                 }
-            
+
                 document.onkeydown = function () {
                     if (event.keyCode == 13) {
                         Search();
                     }
                 }
-            
+
                 function Search() {
                     var url = 'https://cn.bing.com/search?q=' + oInp.value;
-                    window.open(url,'_self');
+                    window.open(url, '_self');
                 }
             </script>
 
             <script>
-                $(".search-btn").click(function(){
-                    $(this).css("display","none");
+                $(".search-btn").click(function () {
+                    $(this).css("display", "none");
                     $(".search-data").fadeIn(500);
                     $(".close-btn").fadeIn(500);
                     $(".search-data .line").addClass("active");
-                    setTimeout(function(){
+                    setTimeout(function () {
                         $("input").focus();
                         $(".search-data label").fadeIn(500);
                         $(".search-data span").fadeIn(500);
                     }, 800);
                 });
-                $(".close-btn").click(function(){
+                $(".close-btn").click(function () {
                     $(".search-btn").fadeIn(800);
                     $(".search-data").fadeOut(500);
                     $(".close-btn").fadeOut(500);
@@ -162,8 +162,8 @@
                             <div class="main-img">
                                 <!-- <img id="logo-img" src="./img/icon/logo.png" alt="img"> -->
                                 <div class="img-title">
-                                    <span class="img-title-big" id="logo-text-1">朋朋</span>
-                                    <span class="img-text" id="logo-text-2">.io</span>
+                                    <span class="img-title-big" id="logo-text-1">朋の主页</span>
+                                    <!-- <span class="img-text" id="logo-text-2">.io</span> -->
                                 </div>
                             </div>
                             <!--介绍信息-->
@@ -181,20 +181,29 @@
                                     target="_blank">
                                     <i class="fa-brands fa-github"></i>
                                 </a>
-                                <!-- <a href="https://wpa.qq.com/msgrd?v=3&uin=2257757362&site=qq&menu=yes" class="link"
-                                    id="qq" target="_blank">
-                                    <i class="fa-brands fa-qq"></i>
-                                </a> -->
+
                                 <a href="mailto:j68769778@gmail.com" class="link" id="email">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
-                                <!-- <a href="https://space.bilibili.com/1410673018" class="link" id="bilibili"
-                                    target="_blank">
-                                    <i class="fa-brands fa-bilibili"></i>
-                                </a> -->
+
                                 <a href="https://t.me/p1145p" class="link" id="telegram" target="_blank">
                                     <i class="fa-brands fa-telegram"></i>
                                 </a>
+                                <a href="https://x.com/p1145p" class="link" id="x" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="46.48" height="28" viewBox="0 0 256 256">
+                                        <path fill="#ffffff"
+                                            d="m218.12 209.56l-61-95.8l59.72-65.69a12 12 0 0 0-17.76-16.14l-55.27 60.84l-37.69-59.21A12 12 0 0 0 96 28H48a12 12 0 0 0-10.12 18.44l61 95.8l-59.76 65.69a12 12 0 1 0 17.76 16.14l55.31-60.84l37.69 59.21A12 12 0 0 0 160 228h48a12 12 0 0 0 10.12-18.44M166.59 204L69.86 52h19.55l96.73 152Z" />
+                                    </svg>
+                                </a>
+                                
+                                <!-- <a href="https://wpa.qq.com/msgrd?v=3&uin=不要乱加&site=qq&menu=yes" class="link"
+                                    id="qq" target="_blank">
+                                    <i class="fa-brands fa-qq"></i>
+                                </a> -->
+                                <!-- <a href="https://space.bilibili.com/号玩封了" class="link" id="bilibili"
+                                    target="_blank">
+                                    <i class="fa-brands fa-bilibili"></i>
+                                </a> -->
                                 <a id="link-text">通过这里联系我</a>
                             </div>
                         </div>
@@ -499,7 +508,7 @@
                                         aria-labelledby="headingTwo" data-bs-parent="#accordion">
                                         <div class="accordion-body">
                                             <div class="upnote">
-						<span class="uptext">
+                                                <span class="uptext">
                                                     <i class="fa-solid fa-circle-plus"></i>&nbsp;加快网页相应速度 By.阿坤
                                                 </span>
                                                 <span class="uptext">
@@ -550,10 +559,8 @@
             <div class="power">Copyright&nbsp;©&nbsp;<span id="power-year">2022</span>
                 <script>
                     document.write(' - ' + (new Date()).getFullYear())
-                </script>&nbsp;<a href="mchooray.xyz" id="power-text">朋朋|Hs</a>&nbsp;&amp;&nbsp;
-                <!-- 以下信息请不要修改哦 -->
-                Made&nbsp;⚙Modified from&nbsp;<a href="/" target="_blank">imsyy</a>
-				🔒<a href="https://beian.miit.gov.cn/">暂未备案</a>
+                </script>&nbsp;<a href="mchooray.xyz" id="power-text">朋朋</a>
+                🔒<a href="https://beian.miit.gov.cn/">暂未备案</a>
             </div>
             <!-- 歌词显示 -->
             <div id="lrc"></div>
@@ -578,7 +585,7 @@
     <script type="text/javascript" src="./js/js.cookie.js"></script>
     <script type="text/javascript"
         src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/js/bootstrap.min.js">
-    </script>
+        </script>
 </body>
 
 </html>

@@ -313,7 +313,7 @@ $("#bilibili")
   });
 $("#telegram")
   .mouseover(function () {
-    $("#link-text").html("你懂的 ~");
+    $("#link-text").html("和我聊天?!");
   })
   .mouseout(function () {
     $("#link-text").html("通过这里联系我");
@@ -355,11 +355,11 @@ $("#switchmore").on("click", function () {
   if (shoemore && $(document).width() >= 990) {
     $("#container").attr("class", "container mores");
     $("#change").html("Oops&nbsp;!");
-    $("#change1").html("哎呀，这都被你发现了（ 再点击一次可关闭 ）");
+    $("#change1").html("哎呀，这都被你发现了（ 再点击一次可切换 ）");
   } else {
     $("#container").attr("class", "container");
     $("#change").html("Hello&nbsp;World&nbsp;!");
-    $("#change1").html("一个不正经的Up");
+    $("#change1").html("喜欢整活");
   }
 });
 
@@ -408,7 +408,7 @@ window.addEventListener("load", function () {
       //移动端隐藏更多页面
       $("#container").attr("class", "container");
       $("#change").html("Hello&nbsp;World&nbsp;!");
-      $("#change1").html("一个不正经的Up");
+      $("#change1").html("喜欢整活");
 
       //移动端隐藏弹窗页面
       $("#box").css("display", "none");
@@ -463,8 +463,9 @@ color: rgb(244,167,89);
 let styleContent = `
 color: rgb(30,152,255);
 `;
-let title1 = "無名の主页";
+let title1 = "朋の主页";
 let title2 = `
+原作者信息：
  _____ __  __  _______     ____     __
 |_   _|  \\/  |/ ____\\ \\   / /\\ \\   / /
   | | | \\  / | (___  \\ \\_/ /  \\ \\_/ / 
