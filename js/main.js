@@ -287,12 +287,16 @@ $("#github")
   .mouseover(function () {
     $("#link-text").html("去 Github 看看");
   })
+  $("#x")
+  .mouseover(function () {
+    $("#link-text").html("看看我的推文?");
+  })
   .mouseout(function () {
     $("#link-text").html("通过这里联系我");
   });
-$("#qq")
+$("#youtube")
   .mouseover(function () {
-    $("#link-text").html("有什么事吗");
+    $("#link-text").html("看看我的频道?");
   })
   .mouseout(function () {
     $("#link-text").html("通过这里联系我");

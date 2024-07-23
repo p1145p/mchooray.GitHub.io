@@ -355,12 +355,9 @@ span#change {
     align-items: center;
     max-width: 460px;
     height: 42px;
+    gap: 10px;
 }
 
-.link i {
-    font-size: 1.45rem;
-    margin: 2px 12px;
-}
 
 /*
 .social .link i:hover {
