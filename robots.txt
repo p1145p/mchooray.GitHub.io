@@ -1,0 +1,6 @@
+# 允许所有搜索引擎爬虫访问网站的所有页面
+User-agent: *
+Disallow:
+
+# 指定网页地图的位置
+Sitemap: https://www.peng520.xyz/sitemap.txt
