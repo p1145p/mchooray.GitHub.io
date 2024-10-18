@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -485,4 +486,493 @@
     <script type="text/javascript" src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 基础信息 -->
+    <meta charset="utf-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <!-- 强制 HTTPS，若不需要可删除，但可能出现问题 -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="force-rendering" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#424242" />
+    <meta name="description" content="朋の主页">
+    <meta name="keywords" content="Index">
+    <meta name="author" content="朋朋">
+    <title>朋の主页</title>
+    <!-- jQuery cdn -->
+    <script src="./js/jquery-3.5.1.js"></script>
+    <!-- HarmonyOS Sans -->
+    <link rel="stylesheet" href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" />
+    <!-- 引入样式 -->
+    <link rel="stylesheet" type="text/css"
+        href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="./css/loading.css">
+    <link rel="stylesheet" type="text/css" href="./css/animation.css">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png">
+    <!-- Izitoast -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/css/iziToast.min.css">
+    <script type="text/javascript"
+        src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- Aplayer -->
+    <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <!-- IE Out -->
+    <script>
+        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href = "upgrade-your-browser.html";
+    </script>
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+    <!--加载动画-->
+    <div id="loading-box">
+        <div class="loading-left-bg"></div>
+        <div class="loading-right-bg"></div>
+        <div class="spinner-box">
+            <div class="loader">
+                <div class="inner one"></div>
+                <div class="inner two"></div>
+                <div class="inner three"></div>
+            </div>
+            <div class="loading-word">
+                <p class="loading-title" id="loading-title">朋の主页</p>
+                <span id="loading-text">Loading......</span>
+            </div>
+        </div>
+    </div>
+    <section id="section" class="section">
+        <!-- 背景图片 -->
+        <style type="text/css">
+            body {
+                background: url("img/background1.webp") no-repeat center center fixed;
+                /*兼容浏览器版本*/
+                -webkit-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+
+            /*背景图*/
+
+            .test {
+                margin-top: 100px;
+            }
+        </style>
+        <!-- 鼠标指针 -->
+        <div id="g-pointer-1"></div>
+        <div id="g-pointer-2"></div>
+        <!-- 主体内容 -->
+        <main id="main" class="main">
+            <!-- 搜索框 -->
+            <div class="close-btn">
+                <span class="fas fa-times"></span>
+            </div>
+            <div class="search-btn">
+                <span class="fas fa-search"></span>
+            </div>
+            <div class="search-data">
+                <input type="text" id="inp" required />
+                <div class="line"></div>
+
+                <span class="fas fa-search" id="btn"></span>
+            </div>
+
+            <script>
+                var oInp = document.getElementById('inp');
+                var oBtn = document.getElementById('btn');
+
+                oBtn.onclick = function () {
+                    Search();
+                }
+
+                document.onkeydown = function () {
+                    if (event.keyCode == 13) {
+                        Search();
+                    }
+                }
+
+                function Search() {
+                    var url = 'https://cn.bing.com/search?q=' + oInp.value;
+                    window.open(url, '_self');
+                }
+            </script>
+
+            <script>
+                $(".search-btn").click(function () {
+                    $(this).css("display", "none");
+                    $(".search-data").fadeIn(500);
+                    $(".close-btn").fadeIn(500);
+                    $(".search-data .line").addClass("active");
+                    setTimeout(function () {
+                        $("input").focus();
+                        $(".search-data label").fadeIn(500);
+                        $(".search-data span").fadeIn(500);
+                    }, 800);
+                });
+                $(".close-btn").click(function () {
+                    $(".search-btn").fadeIn(800);
+                    $(".search-data").fadeOut(500);
+                    $(".close-btn").fadeOut(500);
+                    $(".search-data .line").removeClass("active");
+                    $("input").val("");
+                    $(".search-data label").fadeOut(500);
+                    $(".search-data span").fadeOut(500);
+                });
+            </script>
+            <div class="container" id="container">
+                <div class="row" id="row">
+                    <div class="col left">
+                        <!--基本信息-->
+                        <div class="main-left">
+                            <!--Logo-->
+                            <div class="main-img">
+                                <!-- <img id="logo-img" src="./img/icon/logo.png" alt="img"> -->
+                                <div class="img-title">
+                                    <span class="img-title-big" id="logo-text-1">朋の主页</span>
+                                </div>
+                            </div>
+                            <!--介绍信息-->
+                            <div class="message cards" id="switchmore">
+                                <div class="des" id="des">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <div class="des-title"><span id="change">Hello&nbsp;World&nbsp;!</span><br /><span
+                                            id="change1">喜欢整活</span></div>
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <!--社交链接-->
+                            <div class="social" id="social">
+                                <a href="https://github.com/p1145p" class="link" id="github" style="margin-left: 4px"
+                                    target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="46.48" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+                                </a>
+
+                                <a href="mailto:j68769778@gmail.com" class="link" id="email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="46.48" height="28" viewBox="0 0 24 24"><path fill="#ffffff" d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+                                </a>
+
+                                <a href="https://t.me/p1145p" class="link" id="telegram" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="23" viewBox="0 0 16 16"><path fill="#ffffff" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01q-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32q3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817c-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088c.327.216.589.393.85.571c.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414c.214-.02.435-.22.547-.82c.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315a.34.34 0 0 0-.114-.217a.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/></svg>
+                                </a>
+                                <a href="https://x.com/p1145p" class="link" id="x" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="43.48" height="28"
+                                        viewBox="0 0 256 256">
+                                        <path fill="#ffffff"
+                                            d="m218.12 209.56l-61-95.8l59.72-65.69a12 12 0 0 0-17.76-16.14l-55.27 60.84l-37.69-59.21A12 12 0 0 0 96 28H48a12 12 0 0 0-10.12 18.44l61 95.8l-59.76 65.69a12 12 0 1 0 17.76 16.14l55.31-60.84l37.69 59.21A12 12 0 0 0 160 228h48a12 12 0 0 0 10.12-18.44M166.59 204L69.86 52h19.55l96.73 152Z" />
+                                    </svg>
+                                </a>
+                                <a href="https://youtube.com/@pengpeng707" class="link" id="youtube" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="46.48" height="35"
+                                        viewBox="0 0 24 24">
+                                        <path fill="#ffffff"
+                                            d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73" />
+                                    </svg> </a>
+
+                                <a id="link-text">通过这里联系我</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--第二屏 Logo-->
+                    <div class="logo cards" style="display: none" id="changemore">
+                        <a class="logo-text" id="logo-text-small">mchooray.xyz</a>
+                    </div>
+                    <div class="col right">
+                        <div class="main-right">
+                            <!--功能区-->
+                            <div class="row rightone" id="rightone">
+                                <div class="col hitokotos">
+                                    <!--一言-->
+                                    <div class="hitokoto cards" id="hitokoto">
+                                        <!--切换音乐-->
+                                        <div class="open-music fixed-top" id="open-music">
+                                            <i class="fa-solid fa-compact-disc"></i>
+                                            <span>&nbsp;打开音乐播放器</span>
+                                        </div>
+                                        <!--切换音乐结束-->
+                                        <div class="hitokoto-all">
+                                            <div class="hitokoto-text"><span id="hitokoto_text">喜欢整活</span>
+                                            </div>
+                                            <div class="hitokoto-from">-「&nbsp;<span id="from_text">朋朋</span>&nbsp;」
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--音乐-->
+                                    <div class="music" id="music">
+                                        <div class="music-all">
+                                            <div class="music-button">
+                                                <div id="music-open">音乐列表</div>
+                                                <div id="music-close">回到一言</div>
+                                            </div>
+                                            <div class="music-control">
+                                                <i class="fa-solid fa-backward-step" id="last"></i>
+                                                <div id="play">
+                                                    <i class="fa-solid fa-play"></i>
+                                                </div>
+                                                <i class="fa-solid fa-forward-step" id="next"></i>
+                                            </div>
+                                            <div class="music-menu">
+                                                <div class="music-text">
+                                                    <span id="music-name">未播放音乐</span>
+                                                </div>
+                                                <div class="music-volume" style="display: none;">
+                                                    <div id="volume-ico">
+                                                        <i class="fa-solid fa-volume-low"></i>
+                                                    </div>
+                                                    <input type="range" min="0" max="1" step="0.01" id="volume">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col times">
+                                    <!--时间-->
+                                    <div class="time cards" id="upWeather">
+                                        <div class="timeshow" id="time">
+                                            2000&nbsp;年&nbsp;0&nbsp;月&nbsp;00&nbsp;日&nbsp;<span
+                                                class="weekday">星期一</span><br><span class="time-text">00:00:00</span>
+                                        </div>
+                                        <div class="weather">
+                                            <span id="city_text"> </span>&nbsp;
+                                            <span id="wea_text"> </span>&nbsp;
+                                            <span id="tem_text"> </span>
+                                            <span id="win_text"> </span>
+                                            <span id="win_speed"> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--分隔线-->
+                            <div class="line">
+                                <i class="fa-solid fa-link"></i>
+                                <span class="line-text">网站列表</span>
+                            </div>
+                            <!--网站链接-->
+                            <div class="link">
+                                <!--第一组-->
+                                <div class="row">
+                                    <div class="col">
+                                        <a id="link-url-1" href="llxhq\index.html" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-2" class="fa-solid fa-cloud"></i>
+                                                <span class="link-name" id="link-name-1">流量消耗器</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col 2">
+                                        <a id="link-url-2" href="https://mc.peng520.xyz/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-2" class="fa-solid fa-cloud"></i>
+                                                <span class="link-name" id="link-name-2">朋のmc服务器</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a id="link-url-3" href="https://status.peng520.xyz/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-3" class="fa-solid fa-music"></i>
+                                                <span class="link-name" id="link-name-3">朋的状态页</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--第二组-->
+                                <div class="row" style="margin-top: 1.5rem;">
+                                    <div class="col">
+                                        <a id="link-url-4" href="https://yz.peng520.xyz/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-4" class="fa-solid fa-compass"></i>
+                                                <span class="link-name" id="link-name-4">一中万能墙/span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col 2">
+                                        <a id="link-url-5" href="https://openai.com/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-5" class="fa-solid fa-book-bookmark"></i>
+                                                <span class="link-name" id="link-name-5">OpenAI</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a id="link-url-6" href="https://github.com/arofish/Mirror-pi" target="_blank">
+                                            <div class="link-card cards">
+                                                <i id="link-icon-6" class="fa-solid fa-flask"></i>
+                                                <span class="link-name" id="link-name-6">Mirror-pi</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--展开菜单按钮-->
+                <div class="menu" id="switchmenu">
+                    <a class="munu-button cards" id="menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+                <!--更多内容-->
+                <div class="more" id="more">
+                    <!--关闭按钮-->
+                    <div class="close fixed-top" id="close">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <div class="line" style="margin-top: 1rem;">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <span class="line-text">时间胶囊</span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="date" id="date">
+                        <div class="item" id="dayProgress">
+                            <div class="date-text" style="margin-top: 0rem;">今日已经度过了&nbsp;<span></span>&nbsp;小时</div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="item" id="weekProgress">
+                            <div class="date-text">本周已经度过了&nbsp;<span></span>&nbsp;天</div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="item" id="monthProgress">
+                            <div class="date-text">本月已经度过了&nbsp;<span></span>&nbsp;天</div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="item" id="yearProgress">
+                            <div class="date-text">今年已经度过了&nbsp;<span></span>&nbsp;个月</div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <span class="line-text">杂七杂八</span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <!--网站链接-->
+                    <div class="row">
+                        <div class="col">
+                            <a href="https://www.cupfox.app/" target="_blank">
+                                <div class="link-card cards">
+                                    <span class="link-name">CupFox</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col 2">
+                            <a href="https://tool.oschina.net/highlight" target="_blank">
+                                <div class="link-card cards">
+                                    <span class="link-name">Code高亮</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://auth.bupt.edu.cn/" target="_blank">
+                                <div class="link-card cards">
+                                    <span class="link-name">云平台</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 1.5rem;">
+                        <div class="col">
+                            <a href="https://chat.forefront.ai/" target="_blank">
+                                <div class="link-card cards">
+                                    <span class="link-name">ChatGPT</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col 2">
+                            <a href="https://portals.zhihuishu.com/" target="_blank">
+                                <div class="link-card cards">
+                                    <span class="link-name">智慧树</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a id="openmore">
+                                <div class="link-card cards">
+                                    <span class="link-name">更多</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="box" style="display: none">
+                    <div class="box-wrapper">
+                        <!--关闭按钮-->
+                        <div class="closebox fixed-top" id="closemore">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </div>
+                        <!--左侧内容-->
+                        <div class="box-left">
+                            <div class="img-title">
+                                <span class="img-title-big" id="logo-title-other">朋朋</span>
+                                <span class="img-text" id="logo-title-other-small">www.peng520.xyz</span><br />
+                                <span class="img-text">&nbsp;v&nbsp;1.1</span>
+                                <a href="https://github.com/p1145p" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!--Aplayer-->
+                        <div class="box-right">
+                            <div id="aplayer">
+                                <span>音乐播放器加载失败</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- 版权信息 -->
+        <footer id="footer" class="fixed-bottom footer">
+            <div class="power">Copyright&nbsp;©&nbsp;<span id="power-year">2022</span>
+                <script>
+                    document.write(' - ' + (new Date()).getFullYear())
+                </script>&nbsp;<a href="https://www.peng520.xyz" id="power-text">朋朋</a>
+                🔒暂未备案
+            </div>
+            <!-- 歌词显示 -->
+            <div id="lrc"></div>
+        </footer>
+    </section>
+    <!-- sw.js -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register("sw.js");
+            });
+        }
+    </script>
+    <!-- noscript -->
+    <noscript>
+        <div class="noscript fixed-top">请开启 JavaScript</div>
+    </noscript>
+    <!-- JS -->
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/set.js"></script>
+    <script type="text/javascript" src="./js/time.js"></script>
+    <script type="text/javascript" src="./js/js.cookie.js"></script>
+    <script type="text/javascript" src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+>>>>>>> f44c2d763bf814935a6002a09be1a22ce0d5e9b3
 </html>
